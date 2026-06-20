@@ -67,3 +67,19 @@ def execute_query(sql_query):
     conn.close()
 
     return result
+
+
+def execute_query(sql_query: str):
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(sql_query)
+
+    rows = cursor.fetchall()
+
+    results = [dict(row) for row in rows]
+
+    conn.close()
+
+    return results

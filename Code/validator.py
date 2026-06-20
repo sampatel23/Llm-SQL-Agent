@@ -48,3 +48,11 @@ def validate_sql(sql_query: str):
         raise ValueError(
             f"SQL Validation Failed: {str(e)}"
         )
+    
+def add_limit_if_missing(sql_query):
+    
+    if "LIMIT" not in sql_query.upper():
+        sql_query = sql_query.rstrip(";")
+        sql_query += " LIMIT 100"
+
+    return sql_query
