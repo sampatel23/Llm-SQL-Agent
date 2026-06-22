@@ -20,7 +20,7 @@ flowchart TD
 		H --> I[SQLite Execution]
 		I --> J[Answer Generation]
 		J --> K[JSON Response]
-
+```
 
 plain text version
 User Question
