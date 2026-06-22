@@ -19,7 +19,7 @@ from code.answer_generator import generate_answer
 
 
 app = FastAPI(
-    title="Sparkline AI SQL Assistant"
+    title="AI SQL Assistant"
 )
 
 
@@ -38,7 +38,7 @@ BLOCKED_KEYWORDS = [
 @app.get("/")
 def root():
     return {
-        "message": "Sparkline AI SQL Assistant Running"
+        "message": "AI SQL Assistant Running"
     }
 
 
